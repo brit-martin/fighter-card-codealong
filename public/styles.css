@@ -1,10 +1,11 @@
 body {
-    background-color: #9BDEAC;
+    background-color: #89B0AE;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-Items: center;
     justify-content: center;
+    color: white;
 
 }
  form {
@@ -12,7 +13,7 @@ body {
     border-radius: 7px;
     border: 2px white solid;
     padding: 20px;
-    background-color: #B4E7CE;
+    background-color: #BEE3DB;
     
  }
 
@@ -25,7 +26,7 @@ body {
  }
  button {
     border-radius: 30px;
-    background-color: white;
-    border: 2px solid black;
+    background-color: #89B0AE;
+    border: 2px solid white;
     font-size: 18px;
  }

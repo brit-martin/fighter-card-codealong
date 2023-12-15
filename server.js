@@ -5,6 +5,11 @@ import { dirname, join } from 'path';
 import { fileURLToPath} from 'url';
 
 let app = express()
+//---------------MIDDLE WARE
+app.use(express.json())
+
+//-------------------------
+let db =[];
 
 //----------showing how we derived the full path to our HTML file-----------------------
 // console.log(import.meta.url)
@@ -22,6 +27,11 @@ app.get('/css', (req, res) => {
 
 app.get('/js', (req, res) => {
     res.sendFile(join(dirname(fileURLToPath(import.meta.url)), '/public/main.js'))
+})
+
+app.post('/create-fighter', (req, res) => {
+    db.push(req.body)
+    res.status(200).send(db)
 })
 
 
