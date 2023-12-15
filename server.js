@@ -34,6 +34,24 @@ app.post('/create-fighter', (req, res) => {
     res.status(200).send(db)
 })
 
+app.get('/fighters', (req, res) => {
+    res.status(200).send(db)
+})
+
+app.delete('/delete-fighter', (req, res) => {
+    let name = req.query.name
+    
+    for ( let i=0; i < db.length; i++){
+        if (db[i].name === name){
+            db.splice(i, 1)
+            
+        }
+        
+    }
+// console.log(db)
+        res.status(200).send(db)
+})
+
 
 app.listen(8080, () => {
     console.log("We have started the server on port 8080.")
